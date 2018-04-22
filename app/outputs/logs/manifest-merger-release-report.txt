@@ -1,0 +1,203 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:2:1-46:12
+INJECTED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:2:1-46:12
+INJECTED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:2:1-46:12
+INJECTED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:2:1-46:12
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.4.4.aar/87771ebf988450002076d0de7b36df89/AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/3a9ba3504bef22d243e9bb35c0e8ab5b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-location:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-location-15.0.0.aar/4dd9ef60ff850f84095d2a2da41d3e03/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-maps:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-maps-15.0.0.aar/aec34efb5d42bddd15010d7bfcfca198/AndroidManifest.xml:17:1-32:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/9be28842a8b5009e2a1eccaad3025d10/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/9fe5f10f92a52cfae730c31968974544/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-base:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.0.aar/08bb4e6081372c7c6371b35dabfbd268/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-15.0.0.aar/4858f53fbe1f979c332785f0212ee622/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.0.aar/d4ecb90a9981df1d90d6cb6112b277a3/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.0.aar/af609cb8e66720ff09aecfb5761241c4/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.1.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/a9ffd52f3672edd190df97ffcb9eea07/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/70ad568778006c905c40f2038533a224/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/c4a24047a3dbc0fff07ff1845a0e654c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/c2b8accf9d839df33b0375b8bbc3bffa/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/acc59b478d6eecebc5d3858aff89f6c8/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/342845cf4a449a35f38f28294cb02506/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/b71eb5637bc306d344e3c2cce0b4baa9/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/a48f5830228599295337c19d3b747aa7/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/a979c8a2c8b39492f3588d7c4b5e4aec/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/b4072582c49d61aa27fabb15d1651719/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:2:1-46:12
+INJECTED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:2:1-46:12
+INJECTED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:2:1-46:12
+	package
+		ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:3:5-39
+		INJECTED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml
+		ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:2:1-46:12
+		INJECTED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml
+		ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:2:1-46:12
+		INJECTED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:9:5-79
+	android:name
+		ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:9:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:10:5-81
+	android:name
+		ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:10:22-78
+uses-permission#android.permission.INTERNET
+ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:11:5-66
+MERGED from [com.google.android.gms:play-services-maps:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-maps-15.0.0.aar/aec34efb5d42bddd15010d7bfcfca198/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-maps-15.0.0.aar/aec34efb5d42bddd15010d7bfcfca198/AndroidManifest.xml:24:5-67
+	android:name
+		ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:11:22-64
+application
+ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:13:5-44:19
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.4.4.aar/87771ebf988450002076d0de7b36df89/AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.4.4.aar/87771ebf988450002076d0de7b36df89/AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.android.gms:play-services-location:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-location-15.0.0.aar/4dd9ef60ff850f84095d2a2da41d3e03/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-location-15.0.0.aar/4dd9ef60ff850f84095d2a2da41d3e03/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-maps:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-maps-15.0.0.aar/aec34efb5d42bddd15010d7bfcfca198/AndroidManifest.xml:30:5-20
+MERGED from [com.google.android.gms:play-services-maps:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-maps-15.0.0.aar/aec34efb5d42bddd15010d7bfcfca198/AndroidManifest.xml:30:5-20
+MERGED from [com.google.android.gms:play-services-base:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.0.aar/08bb4e6081372c7c6371b35dabfbd268/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.0.aar/08bb4e6081372c7c6371b35dabfbd268/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-15.0.0.aar/4858f53fbe1f979c332785f0212ee622/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-15.0.0.aar/4858f53fbe1f979c332785f0212ee622/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tasks:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.0.aar/d4ecb90a9981df1d90d6cb6112b277a3/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.0.aar/d4ecb90a9981df1d90d6cb6112b277a3/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.0.aar/af609cb8e66720ff09aecfb5761241c4/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.0.aar/af609cb8e66720ff09aecfb5761241c4/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/a9ffd52f3672edd190df97ffcb9eea07/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/a9ffd52f3672edd190df97ffcb9eea07/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/70ad568778006c905c40f2038533a224/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/70ad568778006c905c40f2038533a224/AndroidManifest.xml:25:5-29:19
+	android:supportsRtl
+		ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:18:9-35
+	android:label
+		ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:16:9-41
+	android:roundIcon
+		ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:17:9-54
+	android:icon
+		ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:15:9-43
+	android:allowBackup
+		ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:14:9-35
+	android:theme
+		ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:19:9-40
+meta-data#com.google.android.gms.version
+ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:28:9-30:69
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.4.4.aar/87771ebf988450002076d0de7b36df89/AndroidManifest.xml:8:9-10:69
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.4.4.aar/87771ebf988450002076d0de7b36df89/AndroidManifest.xml:8:9-10:69
+MERGED from [com.google.android.gms:play-services-basement:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.0.aar/af609cb8e66720ff09aecfb5761241c4/AndroidManifest.xml:23:9-25:69
+MERGED from [com.google.android.gms:play-services-basement:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.0.aar/af609cb8e66720ff09aecfb5761241c4/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:30:13-66
+	android:name
+		ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:29:13-58
+meta-data#com.google.android.geo.API_KEY
+ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:31:9-33:55
+	android:value
+		ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:33:13-52
+	android:name
+		ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:32:13-58
+activity#com.example.mis.polygons.MapsActivity
+ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:35:9-43:20
+	android:label
+		ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:37:13-56
+	android:name
+		ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:36:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:38:13-42:29
+action#android.intent.action.MAIN
+ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:39:17-69
+	android:name
+		ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:39:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:41:17-77
+	android:name
+		ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml:41:27-74
+uses-sdk
+INJECTED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml
+INJECTED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.4.4.aar/87771ebf988450002076d0de7b36df89/AndroidManifest.xml:5:5-43
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.4.4.aar/87771ebf988450002076d0de7b36df89/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/3a9ba3504bef22d243e9bb35c0e8ab5b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/3a9ba3504bef22d243e9bb35c0e8ab5b/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-location:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-location-15.0.0.aar/4dd9ef60ff850f84095d2a2da41d3e03/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-location-15.0.0.aar/4dd9ef60ff850f84095d2a2da41d3e03/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-maps:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-maps-15.0.0.aar/aec34efb5d42bddd15010d7bfcfca198/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-maps-15.0.0.aar/aec34efb5d42bddd15010d7bfcfca198/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/9be28842a8b5009e2a1eccaad3025d10/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/9be28842a8b5009e2a1eccaad3025d10/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/9fe5f10f92a52cfae730c31968974544/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/9fe5f10f92a52cfae730c31968974544/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.0.aar/08bb4e6081372c7c6371b35dabfbd268/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.0.aar/08bb4e6081372c7c6371b35dabfbd268/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-15.0.0.aar/4858f53fbe1f979c332785f0212ee622/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-15.0.0.aar/4858f53fbe1f979c332785f0212ee622/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.0.aar/d4ecb90a9981df1d90d6cb6112b277a3/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.0.aar/d4ecb90a9981df1d90d6cb6112b277a3/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.0.aar/af609cb8e66720ff09aecfb5761241c4/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.0.aar/af609cb8e66720ff09aecfb5761241c4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/a9ffd52f3672edd190df97ffcb9eea07/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/a9ffd52f3672edd190df97ffcb9eea07/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/70ad568778006c905c40f2038533a224/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/70ad568778006c905c40f2038533a224/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/c4a24047a3dbc0fff07ff1845a0e654c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/c4a24047a3dbc0fff07ff1845a0e654c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/c2b8accf9d839df33b0375b8bbc3bffa/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/c2b8accf9d839df33b0375b8bbc3bffa/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/acc59b478d6eecebc5d3858aff89f6c8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/acc59b478d6eecebc5d3858aff89f6c8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/342845cf4a449a35f38f28294cb02506/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/342845cf4a449a35f38f28294cb02506/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/b71eb5637bc306d344e3c2cce0b4baa9/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/b71eb5637bc306d344e3c2cce0b4baa9/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/a48f5830228599295337c19d3b747aa7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/a48f5830228599295337c19d3b747aa7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/a979c8a2c8b39492f3588d7c4b5e4aec/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/a979c8a2c8b39492f3588d7c4b5e4aec/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/b4072582c49d61aa27fabb15d1651719/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/b4072582c49d61aa27fabb15d1651719/AndroidManifest.xml:20:5-44
+INJECTED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml
+INJECTED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-v4:26.1.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/a9ffd52f3672edd190df97ffcb9eea07/AndroidManifest.xml:23:9-51
+	android:targetSdkVersion
+		INJECTED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml
+		ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml
+		ADDED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Sarah/AndroidStudioProjects/mis-2018-exercise-2-maps-polygons/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-maps:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-maps-15.0.0.aar/aec34efb5d42bddd15010d7bfcfca198/AndroidManifest.xml:23:5-79
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-maps-15.0.0.aar/aec34efb5d42bddd15010d7bfcfca198/AndroidManifest.xml:23:22-76
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-maps-15.0.0.aar/aec34efb5d42bddd15010d7bfcfca198/AndroidManifest.xml:26:5-28:35
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-maps-15.0.0.aar/aec34efb5d42bddd15010d7bfcfca198/AndroidManifest.xml:27:9-41
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-maps-15.0.0.aar/aec34efb5d42bddd15010d7bfcfca198/AndroidManifest.xml:28:9-32
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.0.aar/08bb4e6081372c7c6371b35dabfbd268/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.0.aar/08bb4e6081372c7c6371b35dabfbd268/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.0.aar/08bb4e6081372c7c6371b35dabfbd268/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:15.0.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.0.aar/08bb4e6081372c7c6371b35dabfbd268/AndroidManifest.xml:24:13-79
+meta-data#android.support.VERSION
+ADDED from [com.android.support:support-v4:26.1.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/a9ffd52f3672edd190df97ffcb9eea07/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/70ad568778006c905c40f2038533a224/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/70ad568778006c905c40f2038533a224/AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:support-v4:26.1.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/a9ffd52f3672edd190df97ffcb9eea07/AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:support-v4:26.1.0] /Users/Sarah/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/a9ffd52f3672edd190df97ffcb9eea07/AndroidManifest.xml:27:13-51
