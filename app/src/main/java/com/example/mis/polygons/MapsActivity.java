@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.Location;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
@@ -160,15 +161,24 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         try {
             if (mLocationPermissionsGranted) {
-
+                // Wait 3 seconds to get location otherwise location might be null since gps is not ready yet
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    public void run() {
+                    }
+                }, 3000);
                 final Task location = mFusedLocationProviderClient.getLastLocation();
                 location.addOnCompleteListener(new OnCompleteListener() {
                     @Override
                     public void onComplete(@NonNull Task task) {
                         if (task.isSuccessful()) {
                             Location currentLocation = (Location) task.getResult();
-                            LatLng currentGps = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
-                            drawMarker(currentGps, "current location");
+                            if (currentLocation == null)
+                                makeErrorLog("Location is null");
+                            else {
+                                LatLng currentGps = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
+                                drawMarker(currentGps, "current location");
+                            }
                         } else {
                             makeErrorLog("Location is null");
                         }
@@ -276,7 +286,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     // How to calculate the centroid and area of a polygon: http://www.seas.upenn.edu/~sys502/extra_materials/Polygon%20Area%20and%20Centroid.pdf
-   // Calculates area in Longitude/Latitude, needed for centroid calculation
+    // Calculates area in Longitude/Latitude, needed for centroid calculation
     private Double calculatePolygonArea() {
         Double sum = 0.00;
         int n = markerList.size();
