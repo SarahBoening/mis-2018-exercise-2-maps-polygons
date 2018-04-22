@@ -161,12 +161,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         try {
             if (mLocationPermissionsGranted) {
-                // Wait 3 seconds to get location otherwise location might be null since gps is not ready yet
-                Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
-                    public void run() {
-                    }
-                }, 3000);
                 final Task location = mFusedLocationProviderClient.getLastLocation();
                 location.addOnCompleteListener(new OnCompleteListener() {
                     @Override
