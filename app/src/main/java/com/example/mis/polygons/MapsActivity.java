@@ -54,6 +54,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private final LatLng mDefaultLocation = new LatLng(-33.8523341, 151.2106085);
     private Boolean mLocationPermissionsGranted = false;
 
+    FusedLocationProviderClient mFusedLocationProviderClient;
+
     EditText editText;
 
     // All code to save and load marker with Shared preferences: https://stackoverflow.com/questions/25438043/store-google-maps-markers-in-sharedpreferences?rq=1
@@ -73,6 +75,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         markerSet = new LinkedHashSet<>();
         markerList = new ArrayList<>();
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         initMap();
         getLocationPermission();
         loadPreferences();
@@ -80,19 +83,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        if (mMap != null) {
-            super.onSaveInstanceState(outState);
-            savePreferences();
-        }
-    }
-
-    @Override
     protected void onDestroy() {
         super.onDestroy();
-        mMap.clear();
+        if (mMap != null)
+            mMap.clear();
         deletePreferences();
-        markerSet.clear();
+        if (markerList != null)
+            markerList.clear();
     }
 
     @Override
@@ -108,29 +105,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
+    protected void onStart() {
+        super.onStart();
         loadPreferences();
-
+        getLocationPermission();
+        getDeviceLocation();
     }
 
-    @Override
-    protected void onRestart(){
-        super.onRestart();
-        loadPreferences();
-    }
-
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState){
-        super.onRestoreInstanceState(savedInstanceState);
-        loadPreferences();
-
-    }
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
         mMap = googleMap;
-
+        mMap.getUiSettings().setMyLocationButtonEnabled(true);
         if (mLocationPermissionsGranted) {
             getDeviceLocation();
 
@@ -155,32 +141,23 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         });
     }
 
+    // https://github.com/googlesamples/android-play-location/blob/master/BasicLocationSample/java/app/src/main/java/com/google/android/gms/location/sample/basiclocationsample/MainActivity.java
     private void getDeviceLocation() {
-
-        FusedLocationProviderClient mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
-
         try {
             if (mLocationPermissionsGranted) {
-                // Wait 3 seconds to get location otherwise location might be null since gps is not ready yet
-                Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
-                    public void run() {
-                    }
-                }, 3000);
                 final Task location = mFusedLocationProviderClient.getLastLocation();
                 location.addOnCompleteListener(new OnCompleteListener() {
                     @Override
                     public void onComplete(@NonNull Task task) {
-                        if (task.isSuccessful()) {
+                        if (task.isSuccessful() && task.getResult() != null) {
                             Location currentLocation = (Location) task.getResult();
-                            if (currentLocation == null)
-                                makeErrorLog("Location is null");
-                            else {
-                                LatLng currentGps = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
-                                drawMarker(currentGps, "current location");
-                            }
+                            LatLng currentGps = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
+                            drawMarker(currentGps, "current location");
                         } else {
-                            makeErrorLog("Location is null");
+                            // it can happen that location is null if no other location has been set before e.g. by google maps,
+                            // if that's the case open google maps wait for location and open this app again then the last location is found
+                            drawDefaultLocation();
+                            makeErrorLog("No last location found");
                         }
                     }
                 });
@@ -189,6 +166,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             makeErrorLog(e.getMessage());
         }
     }
+
 
     private void getLocationPermission() {
         String[] permissions = {Manifest.permission.ACCESS_FINE_LOCATION,
@@ -320,14 +298,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         return new LatLng((float) 1.0 / (6.0 * area) * c_x, (float) 1.0 / (6.0 * area) * c_y);
     }
 
-    private String chooseUnit(Double area) {
+    private String chooseUnit(int area) {
         // km^2
-        if (area > 1000000.0)
-            return area / 1000000.0 + " km^2";
+        if (area > 1000000)
+            return area / 1000000 + " km^2";
         else {
             // cm^2
             if (area < 0.0001)
-                return area * 1000.0 + " cm^2";
+                return area * 1000 + " cm^2";
                 // m^2
             else
                 return area + " m^2";
@@ -339,7 +317,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         List<LatLng> marker = new ArrayList<>();
         for (int i = 0; i < markerList.size(); i++)
             marker.add(markerList.get(i).getPosition());
-        return chooseUnit(SphericalUtil.computeArea(marker));
+        return chooseUnit((int) SphericalUtil.computeArea(marker));
     }
 
     private void drawPolygon() {
@@ -393,7 +371,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     // Simple function to display and log errors/exceptions
     public void makeErrorLog(String error) {
         Log.e("MapsActivity", error);
-        Toast.makeText(MapsActivity.this, error, Toast.LENGTH_LONG).show();
+        Toast.makeText(MapsActivity.this, error, Toast.LENGTH_SHORT).show();
     }
 
 }
