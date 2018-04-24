@@ -5,7 +5,6 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.Location;
-import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
@@ -17,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.maps.android.SphericalUtil;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -48,12 +48,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private static final String FINE_LOCATION = Manifest.permission.ACCESS_FINE_LOCATION;
     private static final String COURSE_LOCATION = Manifest.permission.ACCESS_COARSE_LOCATION;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1234;
-    private static final float DEFAULT_ZOOM = 15f;
+    private static final float DEFAULT_ZOOM = 17f;
 
     private GoogleMap mMap;
-    private final LatLng mDefaultLocation = new LatLng(-33.8523341, 151.2106085);
+    private final LatLng mDefaultLocation = new LatLng(50.972732, 11.328954);
     private Boolean mLocationPermissionsGranted = false;
 
+    // https://developer.android.com/training/location/retrieve-current.html
     FusedLocationProviderClient mFusedLocationProviderClient;
 
     EditText editText;
@@ -64,6 +65,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private Set<Marker> markerSet;
 
     private Polygon polygon;
+
+    int savedLocationCounter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,37 +82,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         initMap();
         getLocationPermission();
         loadPreferences();
-
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (mMap != null)
-            mMap.clear();
-        deletePreferences();
-        if (markerList != null)
-            markerList.clear();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        savePreferences();
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        savePreferences();
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        loadPreferences();
-        getLocationPermission();
-        getDeviceLocation();
     }
 
     @Override
@@ -126,17 +98,22 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 drawDefaultLocation();
             }
         }
+        getDeviceLocation();
         loadPreferences();
         // source: https://www.programcreek.com/java-api-examples/?code=alaskalinuxuser/apps_small/apps_small-master/MymemoriablePlacesApp/app/src/main/java/com/alaskalinuxuser/mymemoriableplacesapp/MapsActivity.java
         mMap.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
             @Override
             public void onMapLongClick(LatLng latLng) {
                 String descr = editText.getText().toString();
-                if (descr.equals(""))
-                    descr = "a saved location";
-                markerList.add(mMap.addMarker(new MarkerOptions().title(descr).position(latLng)));
+                if (descr.equals("")) {
+                    savedLocationCounter++;
+                    descr = "A saved location " + savedLocationCounter;
+                }
+                drawMarker(latLng, descr);
                 Toast.makeText(MapsActivity.this, "new location marker saved", Toast.LENGTH_SHORT).show();
                 editText.setText("");
+                markerList.add(mMap.addMarker(new MarkerOptions().title(descr).position(latLng)));
+                savePreferences();
             }
         });
     }
@@ -153,6 +130,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             Location currentLocation = (Location) task.getResult();
                             LatLng currentGps = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
                             drawMarker(currentGps, "current location");
+                            savePreferences();
                         } else {
                             // it can happen that location is null if no other location has been set before e.g. by google maps,
                             // if that's the case open google maps wait for location and open this app again then the last location is found
@@ -167,7 +145,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
-
     private void getLocationPermission() {
         String[] permissions = {Manifest.permission.ACCESS_FINE_LOCATION,
                 Manifest.permission.ACCESS_COARSE_LOCATION};
@@ -177,7 +154,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             if (ContextCompat.checkSelfPermission(this.getApplicationContext(),
                     COURSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                 mLocationPermissionsGranted = true;
-                initMap();
             } else {
                 ActivityCompat.requestPermissions(this,
                         permissions,
@@ -188,14 +164,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     permissions,
                     LOCATION_PERMISSION_REQUEST_CODE);
         }
-    }
-
-
-    private void initMap() {
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
     }
 
     @Override
@@ -216,9 +184,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     }
                     mLocationPermissionsGranted = true;
                     initMap();
+                    getDeviceLocation();
                 }
             }
         }
+    }
+
+    private void initMap() {
+        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
     }
 
     private void savePreferences() {
@@ -253,14 +229,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             markerList = new ArrayList<>(markerSet);
             drawSavedMarker();
         }
-    }
-
-    private void deletePreferences() {
-        SharedPreferences sharedPreferences = getSharedPreferences(PREF_FILE, MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.clear();
-        editor.commit();
-
     }
 
     // How to calculate the centroid and area of a polygon: http://www.seas.upenn.edu/~sys502/extra_materials/Polygon%20Area%20and%20Centroid.pdf
@@ -322,7 +290,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private void drawPolygon() {
         LatLng centroid = calculatePolygonCentroid();
-        drawMarker(centroid, calculateMetricPolygonArea());
+        drawCentroidMarker(centroid, calculateMetricPolygonArea());
         // Make array list out of markerList to easily draw the polygon
         List<LatLng> marker = new ArrayList<>();
         for (int i = 0; i < markerList.size(); i++) {
@@ -347,6 +315,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
+    public void deleteMarkers(View view) {
+        if (markerList != null) {
+            markerList.clear();
+            mMap.clear();
+            savePreferences();
+            getDeviceLocation();
+        } else
+            makeErrorLog("All markers already deleted");
+    }
     private void drawMarker(LatLng gpsCoord, String description) {
         if (mMap != null) {
             mMap.addMarker(new MarkerOptions()
@@ -356,7 +333,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
-
+    // Centroid marker in a different color for better differentiation
+    // https://stackoverflow.com/questions/19076124/android-map-marker-color
+    private void drawCentroidMarker(LatLng gpsCoord, String description) {
+        if (mMap != null) {
+            mMap.addMarker(new MarkerOptions()
+                    .position(gpsCoord)
+                    .title(description)
+                    .icon(BitmapDescriptorFactory
+                            .defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(gpsCoord, DEFAULT_ZOOM));
+        }
+    }
     public void drawSavedMarker() {
         for (Marker currentMarker : markerList) {
             drawMarker(currentMarker.getPosition(), currentMarker.getTitle());
@@ -365,7 +353,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     public void drawDefaultLocation() {
         // Set map to default position
-        drawMarker(mDefaultLocation, "Default location: Sydney");
+        drawMarker(mDefaultLocation, "Default location: Weimar, Bauhaus-Uni");
     }
 
     // Simple function to display and log errors/exceptions
